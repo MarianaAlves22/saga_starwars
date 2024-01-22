@@ -1,0 +1,1 @@
+const menu=document.querySelector("header");function activeScroll(){menu.classList.toggle("ativo",0<scrollY)}window.addEventListener("scroll",activeScroll);

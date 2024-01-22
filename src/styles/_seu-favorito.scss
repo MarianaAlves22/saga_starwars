@@ -1,0 +1,47 @@
+@use 'variaveis';
+
+.seu-favorito {
+    padding: 5.6vw;
+
+    &__container {
+        
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            padding-bottom: 20px;
+        }
+
+        &__form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 8px;
+
+            form input,
+            form textarea,
+            form button {
+                display: block;
+                width: 320px;
+                margin-bottom: 8px;
+                padding: 8px;
+            }
+
+            form textarea {
+                resize: none;
+                height: 180px;
+            }
+
+            button {
+                cursor: pointer;
+                background-color: variaveis.$buttonColor;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: rgb(33, 33, 253);
+                }
+            }
+        }
+    }
+}

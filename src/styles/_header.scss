@@ -1,0 +1,28 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 8px 36px;
+    height: 160px;
+    display: flex;        
+    align-items: center;
+    justify-content: space-around;
+    background: variaveis.$headerBackground;
+    z-index: 1;
+}
+
+.header.ativo {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 8px 36px;
+    height: 160px;
+    display: flex;
+    align-items: center;        
+    justify-content: space-around;
+    background: variaveis.$mudancaDoHeader;
+    transition: .5s ease;
+    z-index: 1;
+}

@@ -1,0 +1,15 @@
+@use 'variaveis';
+
+.footer {
+    padding: 16px 0;
+    text-align: center;
+
+    &__container {
+        background-color: black;
+        color: #ecf0f1;
+
+        p {
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@use 'header';
+@use 'variaveis';
+@use 'ordem-cronologica';
+@use 'jogos-star';
+@use 'animacoes-star';
+@use 'series-star';
+@use 'onde-assistir';
+@use 'seu-favorito';
+@use 'footer';
+@use 'inicio';
+
+@font-face {
+    font-family: STJEDISE;
+    src: url(../../assets/fonts/STJEDISE.TTF);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Starjedi;
+    src: url(../../assets/fonts/Starjedi.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Starjedi, sans-serif;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: variaveis.$bodyImage;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corDeTexto2;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corDeTexto1;
+    font-family: STJEDISE;
+}
+
+.title {
+    @include title;
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
+}
+
+.text {
+    @include text;
+    background-color: black;
+
+    @media (max-width: 768px) {
+        @include text(14px);
+    }
+}
+
+.saga-section {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+
+    img {
+        max-width: 93%;
+    }
+
+    &__text_container {
+        padding: 0 2vw;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+}
