@@ -10,7 +10,14 @@
     align-items: center;
     justify-content: space-around;
     background: variaveis.$headerBackground;
+    transition: .5s ease;
     z-index: 1;
+
+    @media (max-width: 768px) {
+        padding: 0 12px 0 12px;
+        max-width: 100%;
+        background-repeat: no-repeat;
+    }
 }
 
 .header.ativo {
@@ -25,4 +32,9 @@
     background: variaveis.$mudancaDoHeader;
     transition: .5s ease;
     z-index: 1;
+
+    @media (max-width: 768px) {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
